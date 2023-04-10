@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Merge {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a size");
+		int size = sc.nextInt();
+		int[] a = new int[size];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = sc.nextInt();
+
+		}
+		System.out.println("Enter a size");
+		int size1 = sc.nextInt();
+		int[] b = new int[size];
+		for (int i = 0; i < a.length; i++) {
+			b[i] = sc.nextInt();
+		}
+		int[] c = new int[a.length + b.length];
+		for (int i = 0, k = 0; i < c.length; i++) {
+			if (i < a.length) {
+				c[i] = a[i];
+			} else {
+				c[i] = b[k++];
+			}
+
+		}
+		System.out.println(Arrays.toString(c));
+
+	}
+
+}
